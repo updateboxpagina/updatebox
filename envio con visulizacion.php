@@ -1,5 +1,5 @@
 <?php
-include 'conexion.php';
+
 
 // Obtiene los datos recién enviados desde el ESP
 $temperatura = $_POST['temperatura'] ?? null;
