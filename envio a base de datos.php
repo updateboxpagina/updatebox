@@ -12,7 +12,7 @@ if ($con) {
         date_default_timezone_set('America/Bogota');
         $fecha_actual = date("Y-m-d H:i:s");
 
-        $consulta = "SELECT * FROM Tb_Sensores ORDER BY Id DESC LIMIT 1"; // Obtener el último registro
+        $consulta = "SELECT * FROM tb_sensores ORDER BY Id DESC LIMIT 1"; // Obtener el último registro
         $resultado = mysqli_query($con, $consulta);
 
         if ($resultado) {
