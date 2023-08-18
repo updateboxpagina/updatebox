@@ -1,9 +1,9 @@
 <?php
  
-        $user = "id21144266_updatebox";
+        $user = "Esteban";
         $pass = "Updatebox1+";
-        $server = "localhost";
-        $db ="id21144266_bd_sensore";
+        $server = "proyecto.mysql.database.azure.com";
+        $db ="proyecto";
         $con = mysqli_connect($server, $user, $pass, $db);
 
 
