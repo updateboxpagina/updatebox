@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Box - Tu Portal de Actualizaciones</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .main-menu {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+        }
+
+        .main-menu li {
+            margin: 10px;
+        }
+
+        .main-menu a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .main-menu a:hover {
+            color: #ffd700;
+        }
+
+        /* Main content */
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .submenu-content {
+            display: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        
+        /* Estilos para la imagen */
+        .welcome-image {
+            max-width: 200px;
+            margin: 10px auto;
+            border: 4px solid #333;
+            display: block;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const submenus = document.querySelectorAll('.main-menu a');
+            const submenuContents = document.querySelectorAll('.submenu-content');
+
+            submenus.forEach((submenu, index) => {
+                submenu.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    submenuContents.forEach(content => {
+                        content.style.display = 'none';
+                    });
+                    submenuContents[index].style.display = 'block';
+                });
+            });
+
+            const inicioSubMenu = document.querySelector('.main-menu a[href="#inicio"]');
+            inicioSubMenu.click();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">Update Box</div>
+        <nav>
+            <ul class="main-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#quienes-somos">Quienes Somos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contáctanos</a></li>
+                <li><a href="#inicio-de-sesion">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+      <!-- Submenú de Inicio -->
+        <section id="inicio" class="submenu-content">
+            <h2>Bienvenido a Update Box</h2>
+            <img src="https://i.ibb.co/dJKH7qV/zyro-image.jpg" class="welcome-image">
+            <h3 style="font-size: 24px; color: #333;">¡Revela la magia de la naturaleza!</h3>
+            <p>La innovadora caja conectada a su estación que le brinda acceso seguro a los datos en una plataforma web</p>
+            <p>Usted decide la frecuencia de actualización.</p>
+            <p>Obtenga información meteorológica actualizada al instante. Para más detalles, visite nuestra sección de servicios.</p>
+            <p>¡Descubra el clima de una manera completamente nueva!</p>
+        </section>
+
+     <!-- Submenú de Quienes Somos -->
+        <section id="quienes-somos" class="submenu-content">
+            <style>
+                .sub-menu {
+                    /* Otros estilos */
+                    text-align: center;
+                    padding: 20px;
+                }
+        
+                .developers {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    margin-top: 20px;
+                }
+        
+                .developer {
+                    flex: 1;
+                    max-width: 220px;
+                    text-align: center;
+                }
+        
+                .developer-image {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+        
+                .developer p {
+                    margin: 5px 0;
+                }
+            </style>
+            <div class="sub-menu-container" id="submenu2">
+                <div class="sub-menu">
+                    <h2 style="font-size: 20px;">Innovación Tecnológica Avanzada</h2>
+                     <p>Somos una empresa dedicada a la vanguardia del desarrollo tecnológico, creando un producto innovador a través de la ingeniosidad. Nuestra solución revoluciona la recopilación de datos al operar en paralelo con los sistemas convencionales de obtención de información.<br>
+                        <br>
+                        Nuestro enfoque es único: aprovechamos los sensores existentes para extraer datos de manera eficiente, canalizándolos hacia nuestra plataforma web de visualización. Además, ofrecemos un Data Logger de alta sofisticación que garantiza una recopilación exhaustiva y detallada de información.<br>
+                        <br>
+                        La versatilidad es uno de nuestros pilares. No solo proporcionamos una solución singular, sino que también permitimos la ampliación de su estación. Con la adición de más sensores, creamos una estación integral que proporciona una perspectiva más rica y completa de los entornos que se monitorizan.</p>
+                    <h2 style="font-size: 20px;">Creadores</h2>
+                    <div class="developers">
+                        <div class="developer">
+                            <img class="developer-image" src="https://i.ibb.co/MgBRNTX/Esteban.jpg">
+                            <p style="font-weight: bold; font-size: 14px;">Esteban Letelier</p>
+                            <p style="font-size: 12px;">Técnico Nivel Medio en Electricidad</p>
+                            <p style="font-size: 12px;">Egresado de Técnico en Automatización y Control Industrial</p>
+                            <p style="font-size: 12px;">Estudiante de último año de Ingeniería en Automatización y Control Industrial</p>
+                        </div>
+                        <div class="developer">
+                            <img class="developer-image" src="https://i.ibb.co/2kyL7ZL/mejor.jpg">
+                            <p style="font-weight: bold; font-size: 14px;">Cristofer González</p>
+                            <p style="font-size: 12px;">Técnico Nivel Medio en Electricidad</p>
+                            <p style="font-size: 12px;">Egresado de Técnico en Automatización y Control Industrial</p>
+                            <p style="font-size: 12px;">Estudiante de último año de Ingeniería en Automatización y Control Industrial</p>
+                        </div>
+                        <div class="developer">
+                            <img class="developer-image" src="https://i.ibb.co/r2gwTB0/Martin.jpg">
+                            <p style="font-weight: bold; font-size: 14px;">Martín Bustamante</p>
+                            <p style="font-size: 12px;">Egresado de Colegio Humanista Científico</p>
+                            <p style="font-size: 12px;">Egresado de Técnico en Automatización y Control Industrial</p>
+                            <p style="font-size: 12px;">Estudiante de último año de Ingeniería en Automatización y Control Industrial</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      
+      
+<!-- Submenú de servicios -->
+<section id="servicios" class="submenu-content">
+    <style>
+        /* Estilos para los servicios */
+        .services-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .service-item {
+            background-color: #f9f9f9;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            max-width: 120px;
+            border: 1px solid black; /* Borde negro */
+        }
+
+        .service-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .service-item h3 {
+            font-size: 12px;
+            margin: 3px 0;
+        }
+
+        .service-item img {
+            max-width: 30px;
+            height: 30px;
+            margin: 3px auto;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        .service-item p {
+            font-size: 10px;
+            margin: 3px 0;
+        }
+
+        /* Estilos adicionales para los tipos de servicio */
+        .service-columns {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .service-column {
+            flex: 1;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            max-width: 300px;
+            margin: 0 10px;
+            border: 1px solid black; /* Borde negro */
+        }
+
+        .service-column:hover {
+            transform: translateY(-3px);
+        }
+
+        .service-column h3 {
+            font-size: 16px;
+            margin: 10px 0;
+            color: black;
+        }
+
+        .service-column img {
+            max-width: 60px;
+            height: 60px;
+            margin: 10px auto;
+            border: 1px solid black;
+            border-radius: 3px;
+        }
+
+        .service-column ul {
+            list-style-type: disc;
+            text-align: left;
+            margin-left: 20px;
+        }
+
+        .service-column li {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+       /* Estilos para características */
+        .feature-list {
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: center; /* Centra el contenido en la vista responsiva */
+        }
+
+        .feature-list h3 {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .feature-list ul {
+            list-style-type: square;
+            text-align: left;
+            margin-left: 20px;
+        }
+
+        .feature-list li {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+         /* Estilos para la tabla de precios */
+        .service-pricing-table {
+            margin: 20px auto; /* Margen general */
+            max-width: 800px;
+            overflow-x: auto; /* Scroll horizontal en pantallas pequeñas */
+            display: flex; /* Cambio para alinear las tablas en una fila */
+            justify-content: space-between; /* Distribución espaciada entre las tablas */
+            flex-wrap: wrap; /* Ajuste para envolver las tablas en responsive */
+        }
+
+        .service-pricing-table table {
+            flex: calc(33.33% - 20px); /* Ancho de tabla y margen entre ellas */
+            border-collapse: collapse;
+            border: 1px solid black;
+            margin: 10px; /* Margen entre las tablas */
+        }
+
+        .service-pricing-table th, .service-pricing-table td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        .service-pricing-table th {
+            background-color: #f9f9f9;
+            font-weight: bold;
+            color: black;
+        }
+
+        .service-pricing-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .service-pricing-table td:first-child {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .service-pricing-table td:nth-child(odd) {
+            background-color: #f5f5f5;
+        }
+
+        .service-pricing-table td:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Ajustes para responsividad */
+        @media (max-width: 768px) {
+            .service-columns {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .service-column {
+                background-color: #f9f9f9;
+                color: black;
+                margin: 10px 0;
+            }
+            /* Estilos para la tabla de precios en modo responsive para dispositivos móviles */
+            @media (max-width: 320px) and (max-height: 568px) {
+            .service-pricing-table table {
+            flex: calc(50% - 10px); /* Reduce el ancho de las tablas en modo responsive */
+        }
+
+        .service-pricing-table th,
+        .service-pricing-table td {
+            padding: 8px; /* Reduce el padding de las celdas */
+            font-size: 10px; /* Reduce el tamaño de fuente */
+        }
+    }
+}
+    </style>
+    
+    <h2>¿Qué te ofrecemos?</h2>
+    <div class="services-container">
+        <div class="service-item" onclick="rotateWheel('right')">
+            <h3>Web</h3>
+            <img src="https://images.vexels.com/media/users/3/205564/isolated/preview/181219b1720d66fb3b80e3a2f2c87c1b-trazo-de-icono-de-cursor-de-sitio-web.png" alt="Servicio 1">
+            <p>Acceso al servicio web las 24 H</p>
+        </div>
+        <div class="service-item" onclick="rotateWheel('right')">
+            <h3>Seguridad</h3>
+            <img src="https://cdn-icons-png.flaticon.com/512/3208/3208690.png" alt="Servicio 2">
+            <p>Protección ante pérdida de información</p>
+        </div>
+        <div class="service-item" onclick="rotateWheel('right')">
+            <h3>Compromiso</h3>
+            <img src="https://c8.alamy.com/compes/2k60x1t/compromiso-con-el-icono-negro-del-apreton-de-manos-o-del-shakehand-plano-estilo-simple-tendencia-moderno-diseno-grafico-grande-exito-logotipo-aislado-sobre-fondo-blanco-co-2k60x1t.jpg" alt="Servicio 3">
+            <p>Precios más bajos hasta 60% en comparación</p>
+        </div>
+        <div class="service-item" onclick="rotateWheel('right')">
+            <h3>Garantía</h3>
+            <img src="https://cdnx.jumpseller.com/optica-vision-vision/image/11782799/garantia.png.png?1600753095" alt="Servicio 4">
+            <p>Garantía de un año extensible</p>
+        </div>
+        <div class="service-item" onclick="rotateWheel('right')">
+            <h3>Tecnología</h3>
+            <img src="https://nodd3r.com/media/blog/Dise%C3%B1o_sin_t%C3%ADtulo_12.png" alt="Servicio 5">
+            <p>Nos ajustamos a su estación meteorológica </p>
+        </div>
+    </div>
+
+    <h2>Tipos de Servicio</h2>
+    <div class="service-columns">
+        <div class="service-column">
+            <h3>Servicio Adaptativo</h3>
+            <img src="https://greentechmexico.com/wp-content/uploads/2019/11/davis-estacion-meteorologica-6153-vantagevue-pro2.jpg" alt="1">
+            <ul>
+                <li>Acceso a visualización por red</li>
+                <li>Adaptabilidad a su estación</li>
+                <li>Mantenimiento de actualizaciones</li>
+                <li>Conectividad a través de red</li>
+                <li>Descarga de datos en Excel</li>
+                <li>Limitación en la expansión de sensores</li>
+            </ul>
+        </div>
+        <div class="service-column">
+            <h3>Servicio Expansible</h3>
+            <img src="https://www.isetek.pe/uploads/iut6wKb3Lhuhwq5cErlsWTOyk43eu6j3-2.jpg?m=1617643717" alt="2">
+            <ul>
+                <li>Junto a lo antes mencionado</li>
+                <li>Escalabilidad modular</li>
+                <li>Adición flexible de sensores</li>
+                <li>Configuración ajustable</li>
+                <li>Precisión de datos mejorada</li>
+                <li>Monitoreo completo de condiciones</li>
+                <li>Operaciones multidisciplinarias</li>
+            </ul>
+        </div>
+        <div class="service-column">
+            <h3>Servicio Industrial</h3>
+            <img src="https://www.wonderware.es/uploadedImages/Content/HMI_SCADA/What_Is_SCADA/2000-What-is-SCADA-10-KeyQuestionsToPonderWhenSelectingSCADASoftware-370x250.jpg" alt="3">
+            <ul>
+                <li>Junto a lo antes mencionado</li>
+                <li>Automatización de procesos</li>
+                <li>Mando a distancia</li>
+                <li>Captura y almacenamiento de datos</li>
+                <li>Operaciones multidisciplinarias</li>
+                <li>Optimización y análisis en línea</li>
+            </ul>
+        </div>
+    </div>
+
+   <h2>Características del Update Box</h2>
+    <div class="feature-list">
+        <h3>El Update Box cuenta con una serie de características avanzadas que lo hacen ideal para una variedad de aplicaciones:</h3>
+        <ul>
+            <li>Interfaz de Expansión de Sensores: El Update Box está diseñado con una interfaz modular que permite la conexión sencilla de una amplia variedad de sensores adicionales...</li>
+            <li>Data Logger Mejorado: La capacidad de almacenamiento de datos se ha mejorado para manejar conjuntos de datos más grandes y variados provenientes de múltiples sensores...</li>
+            <li>Integración SCADA: El Updatebox se puede utilizar como parte de un sistema SCADA en aplicaciones industriales. Puede comunicarse con sistemas de control y supervisión industriales...</li>
+            <li>Sistema de Alertas Personalizables: El sistema de alertas se ha ampliado para permitir que los usuarios configuren alertas basadas en umbrales específicos de datos climáticos...</li>
+            <li>Compatibilidad de Plataformas Múltiples: El sistema en línea del Update Box es compatible con una amplia gama de plataformas, incluyendo dispositivos móviles, tabletas y computadoras de escritorio...</li>
+            <li>Capacidades de Análisis Avanzadas: La plataforma en línea ahora incluye herramientas de análisis de datos avanzadas, como gráficos interactivos y visualizaciones comparativas...</li>
+            <li>Interfaz de Usuario Personalizable: Los usuarios pueden personalizar la interfaz de usuario en línea según sus preferencias y necesidades específicas...</li>
+            <li>Fácil Integración de Dispositivos Externos: Además de sensores meteorológicos, el Update Box se puede conectar a otros dispositivos externos a través de puertos de expansión...</li>
+            <li>Compatibilidad con Protocolos Industriales: El dispositivo ahora es compatible con protocolos industriales estándar para la comunicación y el intercambio de datos con sistemas de automatización y control industrial...</li>
+          <li>Servicio Especial: Este servicio está especializado en llevar a Update Box fuera de lo común, este podrá ser conectado tanto a sistemas más cotidiano(portones eléctricos, puertas automatizas… Etc.), como a gran escala. </li>
+        </ul>
+    </div>
+      <h2>Valor por Servicio</h2>
+    <div class="service-pricing-table">
+<table>
+    <tr>
+        <th colspan="2">Intervalo de actualización: 20 min</th>
+    </tr>
+    <tr>
+        <th>Servicio</th>
+        <th>Precio</th>
+    </tr>
+    <tr>
+        <td>Servicio Adaptativo</td>
+        <td>$59.990</td>
+    </tr>
+    <tr>
+        <td>Servicio Expansible(hasta 10 sensores)</td>
+        <td>$99.990</td>
+    </tr>
+    <tr>
+        <td>Servicio Industrial</td>
+        <td>Dependencia a las características del proyecto</td>
+    </tr>
+    <tr>
+        <td>Servicio Especial</td>
+        <td>Dependencia a las características del proyecto</td>
+    </tr>
+    <tr>
+        <td>Instalación</td>
+        <td>Dependencia a las características del proyecto</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th colspan="2">Intervalo de actualización: 10 min</th>
+    </tr>
+    <tr>
+        <th>Servicio</th>
+        <th>Precio</th>
+    </tr>
+    <tr>
+        <td>Servicio Adaptativo</td>
+        <td>$79.990</td>
+    </tr>
+    <tr>
+        <td>Servicio Expansible(hasta 10 sensores)</td>
+        <td>$109.990</td>
+    </tr>
+    <tr>
+        <td>Servicio Industrial</td>
+        <td>Dependencia a las características del proyecto</td>
+    </tr>
+    <tr>
+        <td>Servicio Especial</td>
+        <td>Dependencia a las características del proyecto</td>
+    </tr>
+    <tr>
+        <td>Instalación</td>
+        <td>Dependencia a las características del proyecto</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th colspan="2">Intervalo de actualización: Tiempo real</th>
+    </tr>
+    <tr>
+        <th>Servicio</th>
+        <th>Precio</th>
+    </tr>
+    <tr>
+        <td>Servicio Adaptativo</td>
+        <td>$89.990</td>
+    </tr>
+    <tr>
+        <td>Servicio Expansible(hasta 10 sensores)</td>
+        <td>$139.990</td>
+    </tr>
+    <tr>
+        <td>Servicio Industrial</td>
+        <td>Dependencia a las características del proyecto</td>
+    </tr>
+    <tr>
+        <td>Servicio Especial</td>
+        <td>Dependencia a las características del proyecto</td>
+    </tr>
+    <tr>
+        <td>Instalación</td>
+        <td>Dependencia a las características del proyecto</td>
+    </tr>
+</table>
+
+
+    </div>
+</section>
+
+
+<!-- Submenú de Contactos -->      
+<section id="contacto" class="submenu-content" style="text-align: center;">
+    <div class="sub-menu-container" id="submenu3" style="display: flex; justify-content: center;">
+        <div class="sub-menu" style="text-align: center; max-width: 100%;">
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 20px auto; max-width: 800px;">
+                <!-- Contenido del submenú "Consultas" -->
+                <div style="width: 100%; background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin: 0 10px 20px; border: 1px solid black;">
+                    <h3 style="font-size: 20px; margin-top: 0; margin-bottom: 10px;">Consultas</h3>
+                    <p style="margin-bottom: 10px;">Tenemos respuestas para tus preguntas y estamos disponibles para ayudarte con consultas</p>
+                    <p style="margin-bottom: 5px;">Correo de Consultas: clientes.update.box@gmail.com</p>
+                    <p style="margin-bottom: 5px;">Celular de Consultas: +987 654 3210</p>
+                    <form action="https://formsubmit.co/clientes.update.box@gmail.com" method="post" style="border: 1px solid #ccc; padding: 10px; border-radius: 10px;">
+                        <p style="font-style: italic; margin-bottom: 10px;">Envíanos un mensaje de Consultas:</p>
+                        <input type="text" name="name" placeholder="Nombre" required style="width: 90%; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                        <input type="email" name="email" placeholder="Correo Electrónico" required style="width: 90%; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                        <textarea name="message" placeholder="Mensaje" required style="width: 90%; padding: 10px; margin-bottom: 10px; border-radius: 5px;"></textarea>
+                        <button type="submit" style="background-color: black; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Enviar</button>
+                        <input type="hidden" name="_next" value="https://www.cubicfactory.com/jseditor/">
+                        <input type="hidden" name="_captcha" value="false">
+                    </form>
+                </div>
+                <!-- Contenido del submenú "Soporte Técnico" -->
+                <div style="width: 100%; background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border: 1px solid black; margin: 0 10px;">
+                    <h3 style="font-size: 20px; margin-top: 0; margin-bottom: 10px;">Soporte Técnico</h3>
+                    <p style="margin-bottom: 10px;">Estamos aquí para ayudarte con cualquier problema técnico que puedas tener.</p>
+                    <p style="margin-bottom: 5px;">Correo de Soporte: servicios.update.box@gmail.com</p>
+                    <p style="margin-bottom: 5px;">Celular de Soporte: +123 456 7890</p>
+                    <form action="https://formsubmit.co/servicios.update.box@gmail.com" method="post" style="border: 1px solid #ccc; padding: 10px; border-radius: 10px;">
+                        <p style="font-style: italic; margin-bottom: 10px;">Envíanos un mensaje de Soporte:</p>
+                        <input type="text" name="name" placeholder="Nombre" required style="width: 90%; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                        <input type="email" name="email" placeholder="Correo Electrónico" required style="width: 90%; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                        <textarea name="message" placeholder="Mensaje" required style="width: 90%; padding: 10px; margin-bottom: 10px; border-radius: 5px;"></textarea>
+                        <button type="submit" style="background-color: black; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Enviar</button>
+                        <input type="hidden" name="_next" value="https://www.cubicfactory.com/jseditor/">
+                        <input type="hidden" name="_captcha" value="false">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+      
+<!-- Submenú de Inicio de Sesión -->
+<section id="inicio-de-sesion" class="submenu-content">
+    <div class="sub-menu-container" id="menu4">
+        <div class="sub-menu" style="border: 2px solid black; padding: 20px; border-radius: 10px;">
+            <form class="login-form" onsubmit="return validateForm();" style="background-color: #f2f2f2; padding: 30px; border-radius: 10px; text-align: center;">
+                <h2 style="text-align: center; color: #333;">Inicio de Sesión</h2>
+                <hr style="border: none; height: 1px; background-color: #ccc; margin: 10px 0;">
+                <label for="username" style="font-weight: bold; color: black;">Usuario:</label>
+                <input type="text" id="username" name="username" required="" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 3px;"><br>
+                <label for="password" style="font-weight: bold; color: black;">Contraseña:</label>
+                <input type="password" id="password" name="password" required="" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 3px;"><br>
+                <div style="text-align: center; margin-top: 20px;">
+                    <button type="submit" style="background-color: black; color: white; border: none; padding: 10px 20px; border-radius: 3px; cursor: pointer;">Iniciar sesión</button>
+                </div>
+                <p id="login-message" style="text-align: center;"></p>
+            </form>
+            <div class="sub-menu-footer" style="margin-top: 20px; text-align: center;">
+                <p style="font-size: 14px;">Update Box - Siempre contigo</p>
+            </div>
+            <script>
+                var credentials = [
+                    { username: "martin", password: "12345" },
+                    { username: "esteban", password: "12345" },
+                    { username: "cristofer", password: "12345" },
+                ];
+
+                function validateForm() {
+                    var username = document.getElementById("username").value;
+                    var password = document.getElementById("password").value;
+                    var loginMessage = document.getElementById("login-message");
+                    var validCredentials = false;
+
+                    for (var i = 0; i < credentials.length; i++) {
+                        if (username === credentials[i].username && password === credentials[i].password) {
+                            validCredentials = true;
+                            break;
+                        }
+                    }
+
+                    if (validCredentials) {
+                        loginMessage.style.color = "green";
+                        loginMessage.textContent = "Acceso concedido. ¡Bienvenido!";
+                        // Redirigir solo si las credenciales son válidas
+                        window.location.href = "https://www.youtube.com/watch?v=mmo9PR_9m84";
+                        return false;
+                    } else {
+                        loginMessage.style.color = "red";
+                        loginMessage.textContent = "Acceso denegado. Credenciales incorrectas.";
+                        return false;
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</section>
+
+
+      
+    </main>
+    <footer>
+        <p>Derechos de autor Cristofer González&copy; 2023</p>
+    </footer>
+</body>
+</html>
