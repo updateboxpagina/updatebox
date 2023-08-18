@@ -34,7 +34,7 @@ if ($con) {
                 $barometricaCambio >= $barometricaUmbral ||
                 $uvCambio >= $uvUmbral
             ) {
-                $consulta = "INSERT INTO Tb_Sensores(Temperatura, Humedad, Barometrica, UV, fecha_actual) VALUES ('$temperatura','$humedad','$barometrica','$uv', '$fecha_actual')";
+                $consulta = "INSERT INTO tb_sensores(Temperatura, Humedad, Barometrica, UV, fecha_actual) VALUES ('$temperatura','$humedad','$barometrica','$uv', '$fecha_actual')";
                 $resultado = mysqli_query($con, $consulta);
 
                 if ($resultado) {
